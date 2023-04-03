@@ -5,11 +5,6 @@ import "@nomiclabs/hardhat-etherscan";
 import * as dotenv from "dotenv";
 dotenv.config();
 
-const proxyUrl = 'http://127.0.0.1:7890';   
-const { ProxyAgent, setGlobalDispatcher } = require("undici");
-const proxyAgent = new ProxyAgent(proxyUrl);
-setGlobalDispatcher(proxyAgent);
-
 const config: HardhatUserConfig = {
   solidity: "0.8.18",
   defaultNetwork: "hardhat",
